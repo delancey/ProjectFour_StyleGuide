@@ -1,0 +1,17 @@
+//Create placeholders for Links, images, headlines, nav items
+
+%btn{
+  font-family: $sans-serif;
+  color: $white;
+  text-transform: uppercase; 
+  margin-bottom: 15px;
+    @include tablet {
+    @include big-btn;
+    }
+}
+
+%theme__colors{
+  height: 40px;
+  border-radius: 5px;
+}
+

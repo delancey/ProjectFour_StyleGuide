@@ -1,0 +1,19 @@
+.nav__item{
+  display: grid;
+  }
+
+.nav__item > a{
+  display: flex;
+  justify-content: center;
+  color: $text;
+  align-items: center;
+    &:hover{
+    color: $white;
+    background-color: $highlight;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 3px;
+  }
+}
+
+

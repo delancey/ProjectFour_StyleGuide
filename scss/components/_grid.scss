@@ -1,0 +1,131 @@
+/*   max width for any layout */
+.container {
+  max-width: 1200px;
+   @include flex;
+    font-family: $sans-serif;
+    display: grid;
+    margin: 0 auto;
+    color: $text;
+  @include tablet{
+    .container {
+    display: grid;
+    grid-gap: 40px;
+    margin-top: 10px;
+    }
+  }   
+}
+
+.grid{
+  &__row{
+  display: grid;
+//    justify-content: center;
+  grid-gap: 10px;
+  margin: 0 10px 20px 10px; 
+    @include tablet{      
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: ($column-width * $grid-columns) + ($gutter * ($grid-columns - 1));  
+    }
+ }
+  
+  &__col--3{
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__col--6{
+  @include flex;
+}
+  &__col--9{
+  display: flex;
+  justify-content: center;
+}
+  
+  &__col--12 {
+  @include flex;
+    @include tablet{
+      flex-direction: row;
+      justify-content: space-between; 
+      flex: 1;
+      
+    }
+  }
+  
+  &__col--4{
+    @include tablet{
+      min-width: 200px;
+    }
+  }
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+
+.grid__col--3.theme__colors{
+  @include grid-style;
+  background-color: lighten($Info, 20%);  
+}
+
+.grid__col--4.theme__colors{
+  @include grid-style;
+  background-color: lighten($Default, 20%);  
+}
+
+.grid__col--5.theme__colors{
+  @include grid-style;
+  background-color: lighten($Success, 20%);  
+}
+
+.grid__col--6.theme__colors{
+   @include grid-style;
+    background-color: darken($Default, 20%);
+  
+}
+
+.grid__col--7.theme__colors{
+   @include grid-style;
+  background-color: lighten($Error, 20%);  
+}
+
+.grid__col--8.theme__colors{
+   @include grid-style;
+  background-color: lighten($Warning, 20%);
+  }
+
+.grid__col--12.theme__colors{
+  @include grid-style;
+  background-color: darken($highlight, 20%);
+}
+
+//-----Desktop Size------//
+@include tablet{
+
+//Calculate grid columns
+@for $i from 1 through $grid-columns {
+  
+//Generate column modifier classes
+  .grid__col--#{$i}.theme__colors {
+     width: percentage($i / $grid-columns); 
+  }  
+}
+  
+  //makes nav horz @ medium breakpoint
+  ul{
+    display: grid;
+    grid-template-columns: repeat(5, 110px);
+    height: 50px;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    }
+ 
+} //end of media query
+
+
+

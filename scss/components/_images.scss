@@ -1,0 +1,33 @@
+
+//RECENTER MOBILE LOGO!!
+
+.img--logo{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin-top: 1em;
+    @include tablet{
+      margin-top: 0;
+  }
+}
+
+
+.img--avatar{
+  padding: 10px 0 20px;
+  width: 55%;
+  margin: 0 auto;
+  height: auto;
+  
+  @include tablet{
+    display: flex;
+    width: 85%;
+  }
+}
+
+
+.img--frame{
+  border: 1px solid lighten($text, 35%);
+  padding: 10px;
+  
+}
+

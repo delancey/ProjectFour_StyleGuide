@@ -1,0 +1,6 @@
+////We're multiplying the column width value by the total number of columns defined in the column count variable we set. Then we're adding the total gutter width by multiplying the gutter width value by the total number of columns, but we're subtracting one gutter width, since there's usually one less gutter than the total number of columns in a grid.
+//
+//@function context($column-width, $column-count, $gutter-width) {
+//  $grid-context: ($column-width * $column-count) + ($gutter-width * ($column-count -1));
+//    @return $grid-context;
+//}

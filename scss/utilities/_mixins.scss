@@ -1,0 +1,47 @@
+//Create mixins for media queries and flexbox settings
+
+@mixin flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin grid-unit ($span){
+  float: left;
+  margin-right: $gutter-width;
+  width: ($column-width*$span)+($gutter-width*($span-1));
+  }
+
+
+//media Queries
+@mixin tablet {
+  @media (min-width: #{$med}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$lrg}) {
+    @content;
+  }
+}
+
+@mixin big-btn{
+  margin: 0 5px;
+  flex: 1 1 auto;
+}
+
+@mixin btn{
+  @extend %btn;
+  @extend %theme__colors;
+}
+
+
+@mixin grid-style{
+  @extend %theme__colors;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,38 @@
+//Create variables for repeated values
+//At minimum create variables for fonts, breakpoints, and colors
+//import into utilities/index.scss file
+
+$Primary:#428bca; 
+$Default: #51ddfc;
+$Success: #63cc82;
+$Error: #e4757a;
+$Warning: #fd7856;
+$Info: #927bc1;
+
+$text: #838383;
+$highlight: #58e1c1;
+$white: #fff;
+
+
+//Font Variables
+
+$sans-serif: 'Poppins', Helvetica, Verdana, sans-serif;
+$blockquote: 'Alegreya Sans SC', sans-serif;
+
+//Breakpoint Variables
+
+$sm: 768px;
+$med: 769px;
+$lrg: 1200px;
+
+
+$btn-def: '.btn--default';
+$btn-suc: '.btn--success';
+$btn-err: '.btn--err';
+$btn-war: '.btn--def';
+$btn-inf: '.btn--def';
+
+$column-width: 60px;
+$gutter:       20px;
+$grid-columns: 12;
+$grid-max:     1200px;

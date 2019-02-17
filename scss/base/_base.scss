@@ -1,0 +1,18 @@
+// Only use *, ul and p tags in this file
+*{
+  text-decoration: none; 
+}
+
+p{
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.75em;
+}
+
+ ul{
+  display: grid;
+  height: 200px;
+  text-align: center;
+  padding: 0;
+  text-align: center; 
+  }
