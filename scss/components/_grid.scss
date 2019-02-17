@@ -18,7 +18,6 @@
 .grid{
   &__row{
   display: grid;
-//    justify-content: center;
   grid-gap: 10px;
   margin: 0 10px 20px 10px; 
     @include tablet{      
@@ -83,23 +82,27 @@
 }
 
 .grid__col--6.theme__colors{
-   @include grid-style;
-    background-color: darken($Default, 20%);
+  @include grid-style;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: darken($Default, 20%);
   
 }
 
 .grid__col--7.theme__colors{
-   @include grid-style;
+  @include grid-style;
   background-color: lighten($Error, 20%);  
 }
 
 .grid__col--8.theme__colors{
-   @include grid-style;
+  @include grid-style;
   background-color: lighten($Warning, 20%);
-  }
+}
 
 .grid__col--12.theme__colors{
   @include grid-style;
+  justify-content: center;
+  align-items: flex-start;
   background-color: darken($highlight, 20%);
 }
 
@@ -111,6 +114,8 @@
   
 //Generate column modifier classes
   .grid__col--#{$i}.theme__colors {
+    justify-content: center;
+    align-items: center;
      width: percentage($i / $grid-columns); 
   }  
 }

@@ -1,6 +1,6 @@
 
 .btn{
-  
+  border: none;
   &--default{
   @include btn;
     background-color: $Default;   
